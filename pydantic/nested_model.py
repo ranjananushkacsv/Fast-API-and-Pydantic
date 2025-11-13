@@ -22,3 +22,7 @@ patient1 = Patient(**patient_dict)
 
 print(patient1)
 print(patient1.address.city) #ab yahan se hum address ka koi bhi part nikal sakte hai
+
+temp = patient1.model_dump_json(include=['name']) #this will convert your existing pydantic base model to python dictionary
+print(temp)
+print(type(temp))
